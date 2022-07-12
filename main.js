@@ -34,14 +34,14 @@ const checkTask = (circle, taskName, task) => {
    circle.addEventListener('click', () => {
       circle.classList.toggle('circle--checked')
       taskName.classList.toggle('todo__task-name-checked')
-      checkIcon.src = '../images/icon-check.svg'
+      checkIcon.src = './images/icon-check.svg'
       circle.classList.contains('circle--checked') ? circle.appendChild(checkIcon) : checkIcon.remove()
       task.classList.toggle('.todo__task--checked')
    })
    taskName.addEventListener('click', () => {
       circle.classList.toggle('circle--checked')
       taskName.classList.toggle('todo__task-name-checked')
-      checkIcon.src = '../images/icon-check.svg'
+      checkIcon.src = './images/icon-check.svg'
       circle.classList.contains('circle--checked') ? circle.appendChild(checkIcon) : checkIcon.remove()
       task.classList.toggle('.todo__task--checked')
    })
@@ -124,6 +124,6 @@ addTaskForm.addEventListener('submit', e => {
    addTaskInput.value && addTask()
 })
 
-document.querySelector('.circle-add').addEventListener('click', () => {
+document.querySelector('.circle--add').addEventListener('click', () => {
    addTaskInput.value && addTask()
 })
